@@ -1,6 +1,6 @@
 {
-  "name": "universal-file-parser",
-  "version": "1.0.3",
+  "name": "fastify-universal-file-parser",
+  "version": "1.0.4",
   "description": "an open-source package to make it easy to get images from the client, the package converts from multiple options(form-data, Base64, and more ) into a buffer.  ",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
@@ -12,14 +12,14 @@
   "repository": {
     "prepublish": "npm run build",
     "type": "git",
-    "url": "git+https://github.com/Ali-A-Koye/universal-file-parser"
+    "url": "git+https://github.com/Ali-A-Koye/fastify-universal-file-parser"
   },
   "author": "Ali Amjed",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ali-A-Koye/universal-file-parser/issues"
+    "url": "https://github.com/Ali-A-Koye/fastify-universal-file-parser/issues"
   },
-  "homepage": "https://github.com/Ali-A-Koye/universal-file-parser#readme",
+  "homepage": "https://github.com/Ali-A-Koye/fastify-universal-file-parser#readme",
   "devDependencies": {
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
@@ -36,7 +36,9 @@
     "supertest": "^6.2.4"
   },
   "dependencies": {
+    "fastify": "^4.5.3",
     "fastify-multer": "^2.0.3",
+    "multer": "^1.4.5-lts.1",
     "superagent": "^8.0.0"
   }
 }

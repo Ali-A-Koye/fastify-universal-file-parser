@@ -6,14 +6,19 @@ import urlToBuffer from "./url";
 import multipart from "./multipart";
 const entry = async (
   field: IndexType,
-  req: RequestType,
+  req: RequestType = {},
   options: { [key: string]: string } = {}
 ) => {
+
+  if(typeof req.body === "undefined") req.body = {};
+
   let value = "";
   if ("type" in options) {
     value = options.type;
+  } else if(typeof req.body !== "undefined") {
+    value = validate(req?.body[field]);
   } else {
-    value = validate(req.body[field]);
+    value = "unknown";
   }
 
   let result = await new Promise(async (resolve, reject) => {
