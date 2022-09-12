@@ -1,6 +1,6 @@
 {
   "name": "fastify-universal-file-parser",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "an open-source package to make it easy to get images from the client, the package converts from multiple options(form-data, Base64, and more ) into a buffer.  ",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",

@@ -31,10 +31,10 @@ const entry = async (
         data = base64ToBuffer(req.body[field]);
         break;
       case "form-data":
-        data = await multipart(req);
+        data = await multipart(req,field);
         break;
       case "unknown": // if we couldn't find anything then it must be multipart || not exist
-        data = await multipart(req);
+        data = await multipart(req,field);
         break;
     }
     return resolve(data);
